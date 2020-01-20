@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "experiment-celery"
+version = "0.1.0"
+description = ""
+authors = ["Tuan Ngo <tuannm79@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+celery = {extras = ["redis"], version = "^4.4.0"}
+
+[tool.poetry.dev-dependencies]
+pre-commit = "^1.21.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
