@@ -13,4 +13,4 @@ RUN poetry install ${PRODUCTION:+--no-dev}
 
 COPY . .
 
-CMD ["python", "./tasks.py"]
+CMD ["./mysite/manage.py", "runserver", "0.0.0.0:8000"]
