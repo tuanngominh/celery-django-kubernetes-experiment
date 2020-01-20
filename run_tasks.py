@@ -1,4 +1,4 @@
-from celery import group, chain, chord
+from celery import group
 
 from tasks import add, mul, xsum, report_error
 
