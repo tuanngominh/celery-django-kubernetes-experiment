@@ -7,6 +7,8 @@ authors = ["Tuan Ngo <tuannm79@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 celery = {extras = ["redis"], version = "^4.4.0"}
+django = "^3.0"
+django-celery-results = "^1.1.2"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^1.21.0"
