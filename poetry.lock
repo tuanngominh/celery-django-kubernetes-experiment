@@ -131,6 +131,17 @@ version = "1.1.2"
 celery = ">=4.3,<5.0"
 
 [[package]]
+category = "main"
+description = "Web APIs for Django, made easy."
+name = "djangorestframework"
+optional = false
+python-versions = ">=3.5"
+version = "3.11.0"
+
+[package.dependencies]
+django = ">=1.11"
+
+[[package]]
 category = "dev"
 description = "File identification library for Python"
 name = "identify"
@@ -266,7 +277,7 @@ docs = ["sphinx (>=1.8.0,<2)", "towncrier (>=18.5.0)", "sphinx-rtd-theme (>=0.4.
 testing = ["pytest (>=4.0.0,<5)", "coverage (>=4.5.0,<5)", "pytest-timeout (>=1.3.0,<2)", "six (>=1.10.0,<2)", "pytest-xdist", "pytest-localserver", "pypiserver", "mock", "xonsh"]
 
 [metadata]
-content-hash = "a08c56a398eca2bb0aac741792b01a3538f6ea44874d8fcbbca6c736daf061e9"
+content-hash = "c49b1c66eeb91a048c25f50e3a7f8eb4b8678c60bd7c7b49ad55160dd61a5d90"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -301,6 +312,10 @@ django = [
 django-celery-results = [
     {file = "django_celery_results-1.1.2-py2.py3-none-any.whl", hash = "sha256:932277e9382528f74778b30cf90e17941cba577b7d73cee09ed55e4972972c32"},
     {file = "django_celery_results-1.1.2.tar.gz", hash = "sha256:e735dc3e705a0e21afc3b6fa2918ec388258145fcbaad3727c493c5707d25034"},
+]
+djangorestframework = [
+    {file = "djangorestframework-3.11.0-py3-none-any.whl", hash = "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4"},
+    {file = "djangorestframework-3.11.0.tar.gz", hash = "sha256:e782087823c47a26826ee5b6fa0c542968219263fb3976ec3c31edab23a4001f"},
 ]
 identify = [
     {file = "identify-1.4.10-py2.py3-none-any.whl", hash = "sha256:418f3b2313ac0b531139311a6b426854e9cbdfcfb6175447a5039aa6291d8b30"},

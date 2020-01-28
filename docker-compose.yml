@@ -12,8 +12,8 @@ services:
     links:
       - redis
     volumes:
-      - .:/code/server
-    command: celery -A tasks worker -l info
+      - ./mysite:/code/server
+    command: celery -A mysite worker -l info
   server:
     build: .
     depends_on:
@@ -21,4 +21,4 @@ services:
     ports:
       - 8000:8000
     volumes:
-      - .:/code/server
+      - ./mysite:/code/server

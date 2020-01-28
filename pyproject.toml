@@ -9,6 +9,7 @@ python = "^3.8"
 celery = {extras = ["redis"], version = "^4.4.0"}
 django = "^3.0"
 django-celery-results = "^1.1.2"
+djangorestframework = "^3.11.0"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^1.21.0"
