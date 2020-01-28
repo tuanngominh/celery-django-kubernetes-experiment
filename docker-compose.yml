@@ -1,6 +1,14 @@
 version: "3.7"
 
 services:
+  db:
+    image: postgres:11
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: test_password
+      POSTGRES_USER: test_user
+      POSTGRES_DB: test_db
   redis:
     image: redis:4
     ports:
