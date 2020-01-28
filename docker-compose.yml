@@ -9,6 +9,11 @@ services:
       POSTGRES_PASSWORD: test_password
       POSTGRES_USER: test_user
       POSTGRES_DB: test_db
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - 5672:5672
+      - 15672:15672
   redis:
     image: redis:4
     ports:
