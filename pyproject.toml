@@ -14,6 +14,7 @@ psycopg2-binary = "^2.8.4"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^1.21.0"
+flower = "^0.9.3"
 
 [build-system]
 requires = ["poetry>=0.12"]
