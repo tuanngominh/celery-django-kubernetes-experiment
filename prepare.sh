@@ -23,11 +23,8 @@ kubectl patch serviceaccount default \
 docker build . -t gcr.io/$GOOGLE_CLOUD_PROJECT/celery-kubernetes-experiment:$TAG
 docker push gcr.io/$GOOGLE_CLOUD_PROJECT/celery-kubernetes-experiment:$TAG
 
-#kubectl create deployment rabbitmq --image=rabbitmq:3-management
-#kubectl expose deployment/rabbitmq --type="NodePort" --port 15672
-#minikube service rabbitmq
 
-
+### Setup k8s with deployments and services
 kubectl create -f k8s/db-deployment.yaml
 kubectl create -f k8s/db-service.yaml
 kubectl create -f k8s/rabbitmq-deployment.yaml
@@ -37,6 +34,16 @@ kubectl create -f k8s/redis-service.yaml
 kubectl create -f k8s/server-deployment.yaml
 kubectl create -f k8s/server-service.yaml
 kubectl create -f k8s/worker-deployment.yaml
+
+### Setup app
+kubectl get pods
+kubectl exec -ti server-5dd945dbf5-dpkj4 bash
+python ./manage.py migrate
+python ./manage.py createsuperuser
+
+
+### Try app in a web browser
+minikube service server
 
 ##### Debug
 kubectl expose deployment/server --type="NodePort" --port 15672
