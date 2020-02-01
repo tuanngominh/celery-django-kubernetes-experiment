@@ -5,7 +5,11 @@
 - [x] Django to create workflow for celery and saving result.
 - [x] Docker compose to setup servers
 - [ ] Kubernetes on GCP for scale
-    - [ ] Kubernetes locally with [minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
+    - [x] Build docker container image
+    - [x] Kubernetes locally with [minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/)
+    - [ ] Stress test and observe scale behavior locally
+- [ ] Enable CI/CD
+    - [ ] Deploy to env using code branch using Jenkins 
 
 # Monitoring
 Run flower

@@ -11,6 +11,7 @@ COPY poetry.lock pyproject.toml ./
 ARG PRODUCTION
 RUN poetry install ${PRODUCTION:+--no-dev}
 
-COPY . .
+COPY mysite .
 
 CMD ["./manage.py", "runserver", "0.0.0.0:8000"]
+
